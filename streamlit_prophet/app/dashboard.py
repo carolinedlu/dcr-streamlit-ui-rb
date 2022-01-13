@@ -7,6 +7,8 @@ import numpy as np
 import altair as alt
 
 
+from streamlit_prophet.lib.utils.load import load_config, load_image
+
 # Page config
 #favicon=st.image(load_image("Darkpoolwhite.png"))
 st.set_page_config(page_title="darkpool",page_icon="❄️")
