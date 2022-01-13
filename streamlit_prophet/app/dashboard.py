@@ -12,9 +12,9 @@ import altair as alt
 st.set_page_config(page_title="darkpool",page_icon="❄️")
 
 # Load config
-#config, instructions, readme = load_config(
-#    "config_streamlit.toml", "config_instructions.toml", "config_readme.toml"
-#)
+config, instructions, readme = load_config(
+   "config_streamlit.toml", "config_instructions.toml", "config_readme.toml"
+)
 
 # Initialization
 dates: Dict[Any, Any] = dict()
