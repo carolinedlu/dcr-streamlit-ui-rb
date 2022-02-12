@@ -34,7 +34,7 @@ sideb.text_input('Password', value="", max_chars=None, key=None, type="password"
 
 # Sidebar choose page 
 sideb.header ("Configuration Navigation")
-persona = sideb.selectbox("", ('Consumer Analyst','Consumer Admin','Provider Admin'))
+persona = sideb.selectbox("", ('Consumer Request','Consumer Admin','Provider Admin'))
 if persona == 'Consumer Request':
       sideb.write('You are viewing the Consumer Request page.')
       
