@@ -27,6 +27,17 @@ config, instructions, readme = load_config(
 dates: Dict[Any, Any] = dict()
 report: List[Dict[str, Any]] = []
    
+
+# Title of the main page
+st.title("Data Storyteller Application")
+
+# Add all your applications (pages) here
+app.add_page("Consumer Request", consumer_request.app)
+
+
+# The main app
+app.run()
+   
 # Sidebar
 sideb = st.sidebar
 sideb.image(load_image("DCRLogoGray.png"),use_column_width=True)
