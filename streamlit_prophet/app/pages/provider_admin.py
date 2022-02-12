@@ -5,7 +5,6 @@ import snowflake.connector
 import plotly.figure_factory as ff
 import numpy as np
 import altair as alt
-import pages import utils
 
 
 from streamlit_prophet.lib.utils.load import load_config, load_image
