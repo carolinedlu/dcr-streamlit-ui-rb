@@ -38,3 +38,11 @@ if persona == 'Consumer Analyst':
 else:
       sideb.write('This setup page is under construction.') 
 
+      
+if persona == 'Consumer Analyst':
+      st.write("Consumer Analyst")
+
+else:
+     st.write("Under Construction")
+     
+
