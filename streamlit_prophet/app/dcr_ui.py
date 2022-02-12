@@ -30,6 +30,13 @@ sideb.text_input('Snowflake Account', value="", max_chars=None, key=None, type="
 sideb.text_input('User Name', value="", max_chars=None, key=None, type="default", help=None, autocomplete=None, on_change=None, placeholder=None)
 sideb.text_input('Password', value="", max_chars=None, key=None, type="password", help=None, autocomplete=None, on_change=None, placeholder=None)
 
+# Sidebar choose page 
+persona = sideb.radio("Configuration Options", ('Consumer Analyst','Consumer Admin','Provider Admin'))
+if persona == 'Consumer Analyst':
+      sideb.write('You are viewing the Consumer Analyst Setup Page.')
+else:
+      sideb.write('This setup page is under construction.') 
+
 # Main Page
 # MainPageLogo
 # st.image(load_image("Darkpoolwhite.png"), use_column_width=True)
