@@ -21,20 +21,22 @@ config, instructions, readme = load_config(
 # Initialization
 dates: Dict[Any, Any] = dict()
 report: List[Dict[str, Any]] = []
+   
+# Sidebar
+st.sidebar.image(load_image("DCRLogoGray.png"),use_column_width=True)
+st.sidebar.text_input('Snowflake Account', value="placeholder", max_chars=None, key=None, type="str", help=None, autocomplete=None, on_change=None, args=None, kwargs=None, *, placeholder=None, disabled=False)
+st.sidebar.text_input('User Name', value="placeholder", max_chars=None, key=None, type="str", help=None, autocomplete=None, on_change=None, args=None, kwargs=None, *, placeholder=None, disabled=False)
+st.sidebar.text_input('Password', value="placeholder", max_chars=None, key=None, type="password", help=None, autocomplete=None, on_change=None, args=None, kwargs=None, *, placeholder=None, disabled=False)
 
-#MainPageLogo
-#st.image(load_image("Darkpoolwhite.png"), use_column_width=True)
+# Main Page
+# MainPageLogo
+# st.image(load_image("Darkpoolwhite.png"), use_column_width=True)
     
-
 # Info
 with st.expander("What is darkpool?", expanded=False):
     st.write(readme["app"]["app_intro"])
     st.write("")
 st.write("")
-
-#Sidebar
-st.sidebar.title("")
-st.sidebar.image(load_image("DCRLogoGray.png"),use_column_width=True)
 
 # Headers   
 
