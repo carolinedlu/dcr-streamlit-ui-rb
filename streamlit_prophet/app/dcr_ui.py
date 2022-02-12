@@ -9,7 +9,7 @@ import altair as alt
 
 from streamlit_prophet.lib.utils.load import load_config, load_image
 from multipage import MultiPage
-from pages import consumer_request, consumer_admin
+from pages import consumer_analyst, consumer_admin, provider_admin
 
 # Sidebar
 sideb = st.sidebar
