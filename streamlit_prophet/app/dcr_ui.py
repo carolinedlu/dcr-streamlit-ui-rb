@@ -34,6 +34,7 @@ sideb.header ("Account Login")
 sideb.text_input('Snowflake Account', value="", max_chars=None, key=None, type="default", help=None, autocomplete=None, on_change=None, placeholder=None)
 sideb.text_input('User Name', value="", max_chars=None, key=None, type="default", help=None, autocomplete=None, on_change=None, placeholder=None)
 sideb.text_input('Password', value="", max_chars=None, key=None, type="password", help=None, autocomplete=None, on_change=None, placeholder=None)
+st.button("Submit", key=None, help=None, on_click=None, args=None, kwargs=None)
 
 # Sidebar choose page 
 sideb.header ("Configuration Navigation")
@@ -72,6 +73,8 @@ def run_query2(query_text):
     option2 = st.multiselect('Select dimensions', df)
             
 run_query("select template_name from DCR_DEMO_APP.CLEANROOM.TEMPLATES;")
+
+st.button("Submit", key=None, help=None, on_click=None, args=None, kwargs=None)
 
       
       
