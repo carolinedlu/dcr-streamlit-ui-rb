@@ -11,7 +11,7 @@ from streamlit_prophet.lib.utils.load import load_config, load_image
 
 # Page config
 #favicon=st.image(load_image("Darkpoolwhite.png"))
-st.set_page_config(page_title="darkpool",page_icon="❄️")
+st.set_page_config(page_title="snowdcr",page_icon="❄️")
 
 # Load config
 config, instructions, readme = load_config(
