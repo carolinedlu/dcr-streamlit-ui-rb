@@ -8,8 +8,7 @@ import altair as alt
 
 
 from streamlit_prophet.lib.utils.load import load_config, load_image
-#from multipage import MultiPage
-#from pages import consumer_analyst, consumer_admin, provider_admin
+
 
 # Page config
 # favicon=st.image(load_image("Darkpoolwhite.png"))
@@ -36,22 +35,39 @@ sideb.text_input('Password', value="", max_chars=None, key=None, type="password"
 # Sidebar choose page 
 sideb.header ("Configuration Navigation")
 persona = sideb.selectbox("", ('Consumer Analyst','Consumer Admin','Provider Admin'))
-if persona == 'Consumer Analyst':
-      sideb.write('You are viewing the Consumer Analyst Setup Page.')
-else:
-      sideb.write('This setup page is under construction.') 
+if persona == 'Consumer Request':
+      sideb.write('You are viewing the Consumer Request page.')
+      
+      # Consumer Request Page
+      title("Consumer Request")
+      header("Privacy Budget as of today")
+      st.text("Current Privacy Budget")
+      
+     
+      
+      
+      
+      
+      
+      
+      
+      
+      
+if persona == 'Consumer Admin':
+      sideb.write('You are viewing the Consumer Admin page.')
+      
+      # Consumer Request Page
+      title("Consumer Admin")
+      header("Under Construction")
 
-
-
-# Create an instance of the app 
-# app = MultiPage()
+if persona == 'Provider Admin':
+      sideb.write('You are viewing the Provider Admin page.')
+      
+      # Consumer Request Page
+      title("Provider Admin")
+      header("Under Construction")
    
 
-
-# Add all your applications (pages) here
-
-if persona == 'Consumer Analyst':
-     st.run("consumer_analyst.py")
 
 
 
