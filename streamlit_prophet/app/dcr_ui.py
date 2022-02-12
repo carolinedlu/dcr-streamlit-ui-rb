@@ -44,7 +44,7 @@ if persona == 'Consumer Request':
       # Consumer Request Page
       st.title("Consumer Request")
       st.header("Privacy Budget as of today")
-      df = pd.DataFrame(10)
+      df = (10)
       st.dataframe(df) 
       st.text("Current Privacy Budget: "+ df)
       
