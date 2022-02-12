@@ -64,16 +64,16 @@ if persona == 'Consumer Request':
             
 run_query("select template_name from DCR_DEMO_APP.CLEANROOM.TEMPLATES;")
             
-   # Load Group by Options
-   def run_query2(query):
-      with conn.cursor() as cur:
-         cur.execute(query)
-         # Return a Pandas DataFrame containing all of the results.
-         df = cur.fetch_pandas_all()
-         option = st.multiselect('Select Dimensions', df)
-         #st.dataframe(df)
+      # Load Group by Options
+      def run_query(query):
+         with conn.cursor() as cur:
+            cur.execute(query)
+            # Return a Pandas DataFrame containing all of the results.
+            df = cur.fetch_pandas_all()
+            option = st.multiselect('Select Dimensions', df)
+            #st.dataframe(df)
             
-run_query2("select table1.value from table(split_to_table('consumer.pets|consumer.zip|provider1.status|provider1.age_band','|')) as table1;")
+run_query("select table1.value from table(split_to_table('consumer.pets|consumer.zip|provider1.status|provider1.age_band','|')) as table1;")
       
       
       
