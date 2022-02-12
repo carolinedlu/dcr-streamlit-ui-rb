@@ -5,6 +5,7 @@ import snowflake.connector
 import plotly.figure_factory as ff
 import numpy as np
 import altair as alt
+import pages import utils
 
 
 from streamlit_prophet.lib.utils.load import load_config, load_image
@@ -25,3 +26,6 @@ report: List[Dict[str, Any]] = []
 # Main Page Header
 
 st.title("Provider Admin")
+
+def app():
+    st.markdown("## Provider Admin")
