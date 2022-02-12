@@ -65,7 +65,7 @@ if persona == 'Consumer Request':
                run_query2("select table1.value from table(split_to_table('consumer.pets|consumer.zip|provider1.status|provider1.age_band','|')) as table1;")
                
  def run_query2(query_text):
- with conn.cursor() as cur:
+   with conn.cursor() as cur:
     cur.execute(query_text)            
     # Return a Pandas DataFrame containing all of the results.
     df = cur.fetch_pandas_all()
