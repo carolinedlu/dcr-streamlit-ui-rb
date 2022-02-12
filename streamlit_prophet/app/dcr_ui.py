@@ -32,7 +32,7 @@ with st.expander("What is darkpool?", expanded=False):
     st.write("")
 st.write("")
 
-st.sidebar.title("Snowflke Data Clean Room)
+st.sidebar.title("Snowflke Data Clean Room")
 
 # Headers   
 
