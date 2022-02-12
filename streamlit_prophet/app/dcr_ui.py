@@ -40,7 +40,7 @@ else:
 
       
 if persona == 'Consumer Analyst':
-st.title("Consumer Request")
+   st.title("Consumer Request")
     
 # Info
 with st.expander("What is darkpool?", expanded=False):
