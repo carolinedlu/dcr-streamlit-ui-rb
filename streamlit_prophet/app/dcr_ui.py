@@ -61,8 +61,11 @@ if persona == 'Consumer Request':
             option = st.selectbox('Select your template', df)
             #st.dataframe(df)
             
+            if option:
+               run_query2("select table1.value from table(split_to_table('consumer.pets|consumer.zip|provider1.status|provider1.age_band','|')) as table1;")
+            
 run_query("select template_name from DCR_DEMO_APP.CLEANROOM.TEMPLATES;")
-#run_query2("select table1.value from table(split_to_table('consumer.pets|consumer.zip|provider1.status|provider1.age_band','|')) as table1;")
+
       
       
       
