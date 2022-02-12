@@ -21,9 +21,8 @@ dates: Dict[Any, Any] = dict()
 report: List[Dict[str, Any]] = []
 
 # Page config
-#favicon=st.image(load_image("Darkpoolwhite.png"))
-st.set_page_config(page_title="snowdcr",page_icon="❄️")
-
+# favicon=st.image(load_image("Darkpoolwhite.png"))
+# st.set_page_config(page_title="snowdcr",page_icon="❄️")
 
 # Sidebar
 sideb = st.sidebar
