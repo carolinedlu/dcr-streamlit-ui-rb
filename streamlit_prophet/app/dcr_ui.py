@@ -51,7 +51,7 @@ app = MultiPage()
 # Add all your applications (pages) here
 
 if persona == 'Consumer Analyst':
-     app.add_page("Consumer Analyst", consumer_analyst)
+     streamlit.run("consumer_analyst.py)
 #app.add_page("Consumer Admin", consumer_admin.app)
 #app.add_page("Provider Admin", provider_admin.app)
 
