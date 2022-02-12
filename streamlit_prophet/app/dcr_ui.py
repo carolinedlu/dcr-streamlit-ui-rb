@@ -25,20 +25,20 @@ report: List[Dict[str, Any]] = []
 # st.set_page_config(page_title="snowdcr",page_icon="❄️")
 
 # Sidebar
-#sideb = st.sidebar
-#sideb.image(load_image("DCRLogoGray.png"),use_column_width=True)
-#sideb.header ("Account Login")
-#sideb.text_input('Snowflake Account', value="", max_chars=None, key=None, type="default", help=None, autocomplete=None, on_change=None, placeholder=None)
-#sideb.text_input('User Name', value="", max_chars=None, key=None, type="default", help=None, autocomplete=None, on_change=None, placeholder=None)
-#sideb.text_input('Password', value="", max_chars=None, key=None, type="password", help=None, autocomplete=None, on_change=None, placeholder=None)
+sideb = st.sidebar
+sideb.image(load_image("DCRLogoGray.png"),use_column_width=True)
+sideb.header ("Account Login")
+sideb.text_input('Snowflake Account', value="", max_chars=None, key=None, type="default", help=None, autocomplete=None, on_change=None, placeholder=None)
+sideb.text_input('User Name', value="", max_chars=None, key=None, type="default", help=None, autocomplete=None, on_change=None, placeholder=None)
+sideb.text_input('Password', value="", max_chars=None, key=None, type="password", help=None, autocomplete=None, on_change=None, placeholder=None)
 
 # Sidebar choose page 
-#sideb.header ("Configuration Navigation")
-#persona = sideb.selectbox("", ('Consumer Analyst','Consumer Admin','Provider Admin'))
-#if persona == 'Consumer Analyst':
-#      sideb.write('You are viewing the Consumer Analyst Setup Page.')
-#else:
-#      sideb.write('This setup page is under construction.') 
+sideb.header ("Configuration Navigation")
+persona = sideb.selectbox("", ('Consumer Analyst','Consumer Admin','Provider Admin'))
+if persona == 'Consumer Analyst':
+      sideb.write('You are viewing the Consumer Analyst Setup Page.')
+else:
+      sideb.write('This setup page is under construction.') 
 
 
 
@@ -49,10 +49,12 @@ app = MultiPage()
 # st.title("Data Storyteller Application")
 
 # Add all your applications (pages) here
-app.add_page("Consumer Analyst", consumer_analyst.app)
+
+if persona == 'Consumer Analyst':
+     app.add_page("Consumer Analyst", consumer_analyst.app)
 #app.add_page("Consumer Admin", consumer_admin.app)
 #app.add_page("Provider Admin", provider_admin.app)
 
 # The main app
-app.run()
+# app.run()
    
