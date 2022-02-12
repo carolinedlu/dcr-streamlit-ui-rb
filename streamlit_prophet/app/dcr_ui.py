@@ -8,6 +8,11 @@ import altair as alt
 
 
 from streamlit_prophet.lib.utils.load import load_config, load_image
+from multipage import MultiPage
+from pages import
+
+# Create an instance of the app 
+app = MultiPage()
 
 # Page config
 #favicon=st.image(load_image("Darkpoolwhite.png"))
