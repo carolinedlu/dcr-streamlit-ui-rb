@@ -57,15 +57,15 @@ if persona == 'Consumer Admin':
       sideb.write('You are viewing the Consumer Admin page.')
       
       # Consumer Request Page
-      title("Consumer Admin")
-      header("Under Construction")
+      st.title("Consumer Admin")
+      st.header("Under Construction")
 
 if persona == 'Provider Admin':
       sideb.write('You are viewing the Provider Admin page.')
       
       # Consumer Request Page
-      title("Provider Admin")
-      header("Under Construction")
+      st.title("Provider Admin")
+      st.header("Under Construction")
    
 
 
