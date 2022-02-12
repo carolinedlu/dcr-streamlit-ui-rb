@@ -58,8 +58,10 @@ if persona == 'Consumer Request':
             # Return a Pandas DataFrame containing all of the results.
             df = cur.fetch_pandas_all()
             option = st.selectbox('Select your template', df)
+            st.dataframe(df)
             
-            run_query="select * from DCR_DEMO_APP.CLEANROOM.TEMPLATES;"
+       run_query="select * from DCR_DEMO_APP.CLEANROOM.TEMPLATES;"
+            
       
      
       
