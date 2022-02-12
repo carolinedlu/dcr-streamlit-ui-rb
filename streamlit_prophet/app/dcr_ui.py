@@ -44,9 +44,8 @@ if persona == 'Consumer Request':
       # Consumer Request Page
       st.title("Consumer Request")
       st.header("Privacy Budget as of today")
-      df = (10)
-      st.dataframe(df) 
-      st.text("Current Privacy Budget: "+ df)
+      privbudget = "10"
+      st.text("Current Privacy Budget: "+ privbudget)
       
       # Connect to Consumer Account
       def init_connection():
