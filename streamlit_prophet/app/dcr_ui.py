@@ -53,10 +53,10 @@ app = MultiPage()
 st.title("Data Storyteller Application")
 
 # Add all your applications (pages) here
-app.add_page("Consumer Analyst", consumer_analyst.py)
-app.add_page("Consumer Admin", consumer_admin.py)
-app.add_page("Provider Admin", provider_admin.py)
+app.add_page("Consumer Analyst", consumer_analyst.app)
+#app.add_page("Consumer Admin", consumer_admin.app)
+#app.add_page("Provider Admin", provider_admin.app)
 
 # The main app
-# app.run()
+app.run()
    
