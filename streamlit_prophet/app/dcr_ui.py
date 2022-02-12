@@ -25,7 +25,7 @@ report: List[Dict[str, Any]] = []
 # Sidebar
 sideb = st.sidebar
 sideb.image(load_image("DCRLogoGray.png"),use_column_width=True)
-sideb.title ("Placeholder for Account Login")
+sideb.header ("Account Login")
 sideb.text_input('Snowflake Account', value="", max_chars=None, key=None, type="default", help=None, autocomplete=None, on_change=None, placeholder=None)
 sideb.text_input('User Name', value="", max_chars=None, key=None, type="default", help=None, autocomplete=None, on_change=None, placeholder=None)
 sideb.text_input('Password', value="", max_chars=None, key=None, type="password", help=None, autocomplete=None, on_change=None, placeholder=None)
