@@ -31,7 +31,8 @@ sideb.text_input('User Name', value="", max_chars=None, key=None, type="default"
 sideb.text_input('Password', value="", max_chars=None, key=None, type="password", help=None, autocomplete=None, on_change=None, placeholder=None)
 
 # Sidebar choose page 
-persona = sideb.radio("Configuration Options", ('Consumer Analyst','Consumer Admin','Provider Admin'))
+sideb.header ("Configuration Navigation")
+persona = sideb.selectbox("", ('Consumer Analyst','Consumer Admin','Provider Admin'))
 if persona == 'Consumer Analyst':
       sideb.write('You are viewing the Consumer Analyst Setup Page.')
 else:
