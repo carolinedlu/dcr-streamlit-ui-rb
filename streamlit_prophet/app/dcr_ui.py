@@ -62,7 +62,7 @@ if persona == 'Consumer Request':
             #st.dataframe(df)
             
 run_query("select template_name from DCR_DEMO_APP.CLEANROOM.TEMPLATES;")
-run_query2("select table1.value from table(split_to_table('consumer.pets|consumer.zip|provider1.status|provider1.age_band','|')) as table1;")
+#run_query2("select table1.value from table(split_to_table('consumer.pets|consumer.zip|provider1.status|provider1.age_band','|')) as table1;")
       
       
       
