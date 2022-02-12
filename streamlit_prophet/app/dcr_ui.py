@@ -11,10 +11,6 @@ from streamlit_prophet.lib.utils.load import load_config, load_image
 from multipage import MultiPage
 from pages import consumer_analyst, consumer_admin, provider_admin
 
-# Page config
-#favicon=st.image(load_image("Darkpoolwhite.png"))
-st.set_page_config(page_title="snowdcr",page_icon="❄️")
-
 # Load config
 config, instructions, readme = load_config(
    "config_streamlit.toml", "config_instructions.toml", "config_readme.toml"
@@ -23,6 +19,11 @@ config, instructions, readme = load_config(
 # Initialization
 dates: Dict[Any, Any] = dict()
 report: List[Dict[str, Any]] = []
+
+# Page config
+#favicon=st.image(load_image("Darkpoolwhite.png"))
+st.set_page_config(page_title="snowdcr",page_icon="❄️")
+
 
 # Sidebar
 sideb = st.sidebar
