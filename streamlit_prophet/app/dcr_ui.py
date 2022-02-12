@@ -40,17 +40,13 @@ if persona == 'Consumer Analyst':
 else:
       sideb.write('This setup page is under construction.') 
 
-      
-if persona == 'Consumer Analyst':
-   st.title("Consumer Request")
-    
 
 
 # Create an instance of the app 
 app = MultiPage()
    
 # Title of the main page
-st.title("Data Storyteller Application")
+# st.title("Data Storyteller Application")
 
 # Add all your applications (pages) here
 app.add_page("Consumer Analyst", consumer_analyst.app)
