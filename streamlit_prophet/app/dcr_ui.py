@@ -54,7 +54,7 @@ report: List[Dict[str, Any]] = []
 st.title("Data Storyteller Application")
 
 # Add all your applications (pages) here
-app.add_page("Consumer Analyst", consumer_request.py)
+app.add_page("Consumer Analyst", consumer_analyst.py)
 app.add_page("Consumer Admin", consumer_admin.py)
 app.add_page("Provider Admin", provider_admin.py)
 
