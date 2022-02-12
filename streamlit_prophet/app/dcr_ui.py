@@ -22,6 +22,9 @@ config, instructions, readme = load_config(
 # Initialization
 dates: Dict[Any, Any] = dict()
 report: List[Dict[str, Any]] = []
+   
+
+
 
 
 # Sidebar
@@ -42,6 +45,20 @@ if persona == 'Consumer Request':
       st.title("Consumer Request")
       st.header("Privacy Budget as of today")
       st.text("Current Privacy Budget")
+      # Connect to Consumer Account
+      def init_connection():
+         return snowflake.connector.connect(**st.secrets["snowcat"])
+      conn = init_connection()
+      
+      # Load Templates into frame
+      def run_query(query):
+      with conn.cursor() as cur:
+        cur.execute(query)
+
+        # Return a Pandas DataFrame containing all of the results.
+        df = cur.fetch_pandas_all()
+        option = st.selectbox('Select your template', df)
+        query="select * from DCR_DEMO_APP.CLEANROOM.TEMPLATES;"
       
      
       
