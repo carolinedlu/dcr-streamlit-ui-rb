@@ -9,7 +9,7 @@ import altair as alt
 
 from streamlit_prophet.lib.utils.load import load_config, load_image
 from multipage import MultiPage
-from pages import
+from pages import consumer_request
 
 # Create an instance of the app 
 app = MultiPage()
