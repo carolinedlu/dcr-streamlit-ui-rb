@@ -58,11 +58,10 @@ if persona == 'Consumer Request':
             cur.execute(query)
             # Return a Pandas DataFrame containing all of the results.
             df = cur.fetch_pandas_all()
-            templates = st.selectbox('Select your template', df)
-            query_text = "select template_name from DCR_DEMO_APP.CLEANROOM.TEMPLATES;"
-            if templates:
-            #st.dataframe(df)            
-               run_query(query_text)
+            option = st.selectbox('Select your template', df)
+            #st.dataframe(df)
+            
+run_query("select template_name from DCR_DEMO_APP.CLEANROOM.TEMPLATES;")
             
       # Load Group by Options
       def run_query2(query):
