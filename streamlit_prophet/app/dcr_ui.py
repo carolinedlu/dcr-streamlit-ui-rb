@@ -39,8 +39,8 @@ if persona == 'Consumer Request':
       sideb.write('You are viewing the Consumer Request page.')
       
       # Consumer Request Page
-      title("Consumer Request")
-      header("Privacy Budget as of today")
+      st.title("Consumer Request")
+      st.header("Privacy Budget as of today")
       st.text("Current Privacy Budget")
       
      
