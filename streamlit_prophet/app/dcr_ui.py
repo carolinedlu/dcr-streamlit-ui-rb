@@ -22,8 +22,8 @@ config, instructions, readme = load_config(
 dates: Dict[Any, Any] = dict()
 report: List[Dict[str, Any]] = []
 
-#Logo
-st.image(load_image("Darkpoolwhite.png"), use_column_width=True)
+#MainPageLogo
+#st.image(load_image("Darkpoolwhite.png"), use_column_width=True)
     
 
 # Info
@@ -32,7 +32,9 @@ with st.expander("What is darkpool?", expanded=False):
     st.write("")
 st.write("")
 
+#Sidebar
 st.sidebar.title("")
+st.sidebar.image(load_image("DCRlogo.png"),use_column_width=True)
 
 # Headers   
 
