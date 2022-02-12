@@ -52,13 +52,13 @@ if persona == 'Consumer Request':
       
       # Load Templates into frame
       def run_query(query):
-      with conn.cursor() as cur:
-        cur.execute(query)
+         with conn.cursor() as cur:
+            cur.execute(query)
 
-        # Return a Pandas DataFrame containing all of the results.
-        df = cur.fetch_pandas_all()
-        option = st.selectbox('Select your template', df)
-        query="select * from DCR_DEMO_APP.CLEANROOM.TEMPLATES;"
+            # Return a Pandas DataFrame containing all of the results.
+            df = cur.fetch_pandas_all()
+            option = st.selectbox('Select your template', df)
+            query="select * from DCR_DEMO_APP.CLEANROOM.TEMPLATES;"
       
      
       
