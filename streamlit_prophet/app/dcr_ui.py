@@ -8,8 +8,8 @@ import altair as alt
 
 
 from streamlit_prophet.lib.utils.load import load_config, load_image
-from multipage import MultiPage
-from pages import consumer_analyst, consumer_admin, provider_admin
+#from multipage import MultiPage
+#from pages import consumer_analyst, consumer_admin, provider_admin
 
 # Load config
 config, instructions, readme = load_config(
@@ -22,7 +22,7 @@ report: List[Dict[str, Any]] = []
 
 # Page config
 # favicon=st.image(load_image("Darkpoolwhite.png"))
-# st.set_page_config(page_title="snowdcr",page_icon="❄️")
+st.set_page_config(page_title="snowdcr",page_icon="❄️")
 
 # Sidebar
 sideb = st.sidebar
@@ -43,17 +43,15 @@ else:
 
 
 # Create an instance of the app 
-app = MultiPage()
+# app = MultiPage()
    
-# Title of the main page
-# st.title("Data Storyteller Application")
+
 
 # Add all your applications (pages) here
 
 if persona == 'Consumer Analyst':
      st.run("consumer_analyst.py")
-#app.add_page("Consumer Admin", consumer_admin.app)
-#app.add_page("Provider Admin", provider_admin.app)
+
 
 
    
