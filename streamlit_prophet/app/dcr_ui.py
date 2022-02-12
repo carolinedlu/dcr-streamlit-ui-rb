@@ -11,6 +11,19 @@ from streamlit_prophet.lib.utils.load import load_config, load_image
 from multipage import MultiPage
 from pages import consumer_analyst, consumer_admin, provider_admin
 
+# Page config
+#favicon=st.image(load_image("Darkpoolwhite.png"))
+st.set_page_config(page_title="snowdcr",page_icon="❄️")
+
+# Load config
+config, instructions, readme = load_config(
+   "config_streamlit.toml", "config_instructions.toml", "config_readme.toml"
+)
+
+# Initialization
+dates: Dict[Any, Any] = dict()
+report: List[Dict[str, Any]] = []
+
 # Sidebar
 sideb = st.sidebar
 sideb.image(load_image("DCRLogoGray.png"),use_column_width=True)
@@ -35,21 +48,7 @@ if persona == 'Consumer Analyst':
 
 # Create an instance of the app 
 app = MultiPage()
-
-# Page config
-#favicon=st.image(load_image("Darkpoolwhite.png"))
-st.set_page_config(page_title="snowdcr",page_icon="❄️")
-
-# Load config
-config, instructions, readme = load_config(
-   "config_streamlit.toml", "config_instructions.toml", "config_readme.toml"
-)
-
-# Initialization
-dates: Dict[Any, Any] = dict()
-report: List[Dict[str, Any]] = []
    
-
 # Title of the main page
 st.title("Data Storyteller Application")
 
@@ -59,5 +58,5 @@ app.add_page("Consumer Admin", consumer_admin.py)
 app.add_page("Provider Admin", provider_admin.py)
 
 # The main app
-app.run()
+# app.run()
    
