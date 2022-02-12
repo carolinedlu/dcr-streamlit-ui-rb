@@ -69,7 +69,7 @@ def run_query2(query_text):
     cur.execute(query_text)            
     # Return a Pandas DataFrame containing all of the results.
     df = cur.fetch_pandas_all()
-    option2 = st.multiselect('Select dimensions', df)
+    option2 = st.checkbox('Select dimensions', df)
             
 run_query("select template_name from DCR_DEMO_APP.CLEANROOM.TEMPLATES;")
 
