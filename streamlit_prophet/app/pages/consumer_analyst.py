@@ -26,7 +26,7 @@ report: List[Dict[str, Any]] = []
 # st.image(load_image("Darkpoolwhite.png"), use_column_width=True)
 # Main Page Header
 
-st.title("Consumer Request")
+st.title("Consumer Analyst")
     
 # Info
 with st.expander("What is darkpool?", expanded=False):
