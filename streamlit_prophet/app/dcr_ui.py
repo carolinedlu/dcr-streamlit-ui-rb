@@ -34,7 +34,7 @@ st.write("")
 
 #Sidebar
 st.sidebar.title("")
-st.sidebar.image(load_image("DCRLogo.png"),use_column_width=True)
+st.sidebar.image(load_image("DCRLogoGray.png"),use_column_width=True)
 
 # Headers   
 
