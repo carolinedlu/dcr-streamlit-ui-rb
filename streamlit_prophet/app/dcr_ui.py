@@ -44,7 +44,10 @@ if persona == 'Consumer Request':
       # Consumer Request Page
       st.title("Consumer Request")
       st.header("Privacy Budget as of today")
-      st.text("Current Privacy Budget")
+      df = pd.DataFrame(10)
+      st.dataframe(df) 
+      st.text("Current Privacy Budget: "+ df)
+      
       # Connect to Consumer Account
       def init_connection():
          return snowflake.connector.connect(**st.secrets["snowcat"])
