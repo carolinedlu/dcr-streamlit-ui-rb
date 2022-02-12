@@ -9,7 +9,7 @@ import altair as alt
 
 from streamlit_prophet.lib.utils.load import load_config, load_image
 from multipage import MultiPage
-from pages import consumer_request
+from pages import consumer_request.py
 
 # Create an instance of the app 
 app = MultiPage()
@@ -32,7 +32,7 @@ report: List[Dict[str, Any]] = []
 st.title("Data Storyteller Application")
 
 # Add all your applications (pages) here
-app.add_page("Consumer Request", consumer_request.app)
+app.add_page("Consumer Request", consumer_request.py)
 
 
 # The main app
