@@ -65,13 +65,13 @@ if persona == 'Consumer Request':
             if option:
                run_query2("select table1.value from table(split_to_table('consumer.pets|consumer.zip|provider1.status|provider1.age_band','|')) as table1;")
                
-def run_query2(query_text):
-   with conn.cursor() as cur:
-    cur.execute(query_text)            
-    # Return a Pandas DataFrame containing all of the results.
-    df = cur.fetch_pandas_all()
-    option2 = st.multiselect('Select dimensions', df)
-    st.button("Submit", key='submitquery', help=None, on_click=None, args=None, kwargs=None)
+   def run_query2(query_text):
+      with conn.cursor() as cur:
+       cur.execute(query_text)            
+       # Return a Pandas DataFrame containing all of the results.
+       df = cur.fetch_pandas_all()
+       option2 = st.multiselect('Select dimensions', df)
+       st.button("Submit", key='submitquery', help=None, on_click=None, args=None, kwargs=None)
       
 run_query("select template_name from DCR_DEMO_APP.CLEANROOM.TEMPLATES;")
 
