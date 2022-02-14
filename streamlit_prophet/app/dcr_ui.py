@@ -22,10 +22,6 @@ config, instructions, readme = load_config(
 # Initialization
 dates: Dict[Any, Any] = dict()
 report: List[Dict[str, Any]] = []
-   
-
-
-
 
 # Sidebar
 sideb = st.sidebar
@@ -39,6 +35,14 @@ sideb.button("Submit", key='login', help=None, on_click=None, args=None, kwargs=
 # Sidebar choose page 
 sideb.header ("Configuration Navigation")
 persona = sideb.selectbox("", ('Consumer Request','Consumer Admin','Provider Admin'))
+
+def run_query(query):
+   with conn.cursor() as cur:
+      cur.execute(query)
+      # Return a Pandas DataFrame containing all of the results.
+      df = cur.fetch_pandas_all()
+      return df
+
 if persona == 'Consumer Request':
       sideb.write('You are viewing the Consumer Request page.')
       
@@ -51,45 +55,18 @@ if persona == 'Consumer Request':
       # Connect to Consumer Account
       def init_connection():
          return snowflake.connector.connect(**st.secrets["snowcat"])
+      
       conn = init_connection()
       
       # Load Templates into frame
-      def run_query(query):
-         with conn.cursor() as cur:
-            cur.execute(query)
-            # Return a Pandas DataFrame containing all of the results.
-            df = cur.fetch_pandas_all()
-            option = st.selectbox('Select your template', df)
-            #st.dataframe(df)
+      df_template = run_query("select template_name from DCR_DEMO_APP.CLEANROOM.TEMPLATES;")
+      options_template = st.selectbox('Select your template', df_template)
+      #st.dataframe(df)
             
-            if option:
-               run_query2("select table1.value from table(split_to_table('consumer.pets|consumer.zip|provider1.status|provider1.age_band','|')) as table1;")
-               
-def run_query2(query_text):
-   with conn.cursor() as cur:
-    cur.execute(query_text)            
-    # Return a Pandas DataFrame containing all of the results.
-    df = cur.fetch_pandas_all()
-    option2 = st.multiselect('Select dimensions', df)
-    st.button("Submit", key='submitquery', help=None, on_click=None, args=None, kwargs=None)
-            
-run_query("select template_name from DCR_DEMO_APP.CLEANROOM.TEMPLATES;")
-
-   
-
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
+      if options_template:
+         df_dimensions = run_query("select table1.value from table(split_to_table('consumer.pets|consumer.zip|provider1.status|provider1.age_band','|')) as table1;")
+         options_dimensions = st.multiselect('Select dimensions', df_dimensions)
+         st.button("Submit", key='submitquery', help=None, on_click=None, args=None, kwargs=None)
       
 if persona == 'Consumer Admin':
       sideb.write('You are viewing the Consumer Admin page.')
