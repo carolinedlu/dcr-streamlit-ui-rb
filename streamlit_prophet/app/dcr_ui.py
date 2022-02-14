@@ -72,8 +72,8 @@ def run_query2(query_text):
     df = cur.fetch_pandas_all()
     option2 = st.multiselect('Select dimensions', df)
     st.button("Submit", key='submitquery', help=None, on_click=None, args=None, kwargs=None)
-            
- run_query("select template_name from DCR_DEMO_APP.CLEANROOM.TEMPLATES;")
+      
+run_query("select template_name from DCR_DEMO_APP.CLEANROOM.TEMPLATES;")
 
    
 
@@ -90,15 +90,14 @@ def run_query2(query_text):
       
       
       
-      
-if persona == 'Consumer Admin':
+      if persona == 'Consumer Admin':
       sideb.write('You are viewing the Consumer Admin page.')
       
       # Consumer Request Page
       st.title("Consumer Admin")
       st.header("Under Construction")
 
-if persona == 'Provider Admin':
+      if persona == 'Provider Admin':
       sideb.write('You are viewing the Provider Admin page.')
       
       # Consumer Request Page
