@@ -65,7 +65,7 @@ if persona == 'Consumer Request':
             if option:
                run_query2("select table1.value from table(split_to_table('consumer.pets|consumer.zip|provider1.status|provider1.age_band','|')) as table1;")
                
- def run_query2(query_text):
+def run_query2(query_text):
    with conn.cursor() as cur:
     cur.execute(query_text)            
     # Return a Pandas DataFrame containing all of the results.
@@ -73,7 +73,7 @@ if persona == 'Consumer Request':
     option2 = st.multiselect('Select dimensions', df)
     st.button("Submit", key='submitquery', help=None, on_click=None, args=None, kwargs=None)
       
- run_query("select template_name from DCR_DEMO_APP.CLEANROOM.TEMPLATES;")
+run_query("select template_name from DCR_DEMO_APP.CLEANROOM.TEMPLATES;")
 
    
 
@@ -89,19 +89,19 @@ if persona == 'Consumer Request':
       
       
       
- if persona == 'Consumer Admin':
-      sideb.write('You are viewing the Consumer Admin page.')
-      
-      # Consumer Request Page
-      st.title("Consumer Admin")
-      st.header("Under Construction")
+if persona == 'Consumer Admin':
+sideb.write('You are viewing the Consumer Admin page.')
 
-      if persona == 'Provider Admin':
-      sideb.write('You are viewing the Provider Admin page.')
-      
-      # Consumer Request Page
-      st.title("Provider Admin")
-      st.header("Under Construction")
+# Consumer Request Page
+st.title("Consumer Admin")
+st.header("Under Construction")
+
+if persona == 'Provider Admin':
+sideb.write('You are viewing the Provider Admin page.')
+
+# Consumer Request Page
+st.title("Provider Admin")
+st.header("Under Construction")
    
 
 
