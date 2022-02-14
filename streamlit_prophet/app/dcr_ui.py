@@ -1,12 +1,10 @@
 from typing import Any, Dict, List
-
 import streamlit as st
 import snowflake.connector
 import plotly.figure_factory as ff
 import numpy as np
 import altair as alt
 from streamlit_prophet.lib.utils.load import load_config, load_image
-
 
 # Page config
 # favicon=st.image(load_image("Darkpoolwhite.png"))
