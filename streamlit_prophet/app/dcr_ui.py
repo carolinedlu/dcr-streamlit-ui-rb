@@ -90,7 +90,7 @@ run_query("select template_name from DCR_DEMO_APP.CLEANROOM.TEMPLATES;")
       
       
       
-      if persona == 'Consumer Admin':
+     if persona == 'Consumer Admin':
       sideb.write('You are viewing the Consumer Admin page.')
       
       # Consumer Request Page
