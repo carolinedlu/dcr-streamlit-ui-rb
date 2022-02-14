@@ -73,7 +73,7 @@ def run_query2(query_text):
     option2 = st.multiselect('Select dimensions', df)
     st.button("Submit", key='submitquery', help=None, on_click=None, args=None, kwargs=None)
             
-run_query("select template_name from DCR_DEMO_APP.CLEANROOM.TEMPLATES;")
+ run_query("select template_name from DCR_DEMO_APP.CLEANROOM.TEMPLATES;")
 
    
 
